@@ -1,4 +1,4 @@
-using SignalRWebpack.Hubs;
+using Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,5 +13,7 @@ app.UseStaticFiles();
 // app.MapGet("/", () => "Hello World!");
 
 app.MapHub<ChatHub>("/hub");
+
+app.MapHub<ClockHub>("/clockhub");
 
 app.Run();

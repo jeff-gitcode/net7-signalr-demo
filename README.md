@@ -3,6 +3,7 @@
 # TechStack
 
 - [x] SignalR
+- [x] Hangfire
 
 ![alt text](./doc/signalr-demo.jpg)
 
@@ -22,4 +23,10 @@ $ npm i @microsoft/signalr @types/node
 $ npm run release
 
 $ dotnet run
+
+# hangfire
+$ dotnet add package Hangfire
+
+$ dotnet add package Hangfire.MemoryStorage
+
 ```
