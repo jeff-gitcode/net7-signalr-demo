@@ -20,7 +20,7 @@ public class Worker : BackgroundService
         {
             _logger.LogInformation("Worker running at: {Time}", DateTime.Now);
             await _clockHub.Clients.All.ShowTime(DateTime.Now);
-            await Task.Delay(1000, stoppingToken);
+            await Task.Delay(6000, stoppingToken);
         }
     }
 }

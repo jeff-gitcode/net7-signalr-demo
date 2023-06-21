@@ -1,6 +1,9 @@
 using Hubs;
+using Services;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHostedService<Worker>();
 
 builder.Services.AddSignalR();
 
@@ -12,7 +15,7 @@ app.UseStaticFiles();
 
 // app.MapGet("/", () => "Hello World!");
 
-app.MapHub<ChatHub>("/hub");
+// app.MapHub<ChatHub>("/hub");
 
 app.MapHub<ClockHub>("/clockhub");
 
